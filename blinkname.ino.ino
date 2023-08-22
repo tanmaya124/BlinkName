@@ -7,7 +7,7 @@ int charIndex = 0;
 char customInput[100];
 int inputPosition = 0;
 
-void systemSetup() {
+void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
   pinMode(inputButton, INPUT_PULLUP);
   Serial.begin(9600);
@@ -51,17 +51,9 @@ void morseEncryption(char letter) {
       dot();
       dot();
       break;
-    case 'a':
-      dot();
-      break;
     case 'y':
       dot();
       dot();
-      dash();
-      dot();
-      break;
-    case 'a':
-      dash();
       dash();
       dot();
       break;
